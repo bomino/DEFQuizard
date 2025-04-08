@@ -1,0 +1,14 @@
+{
+  "admin": {
+    "password": "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9",
+    "role": "admin",
+    "name": "Admin User"
+  },
+  "XLC-GBO_tester2": {
+    "password": "a7b9ccd0d38e4d3dab07576192527e121308682ca95ea0eb8d5563b2d774ccca",
+    "name": "M. Lawali",
+    "role": "operator",
+    "created_at": "2025-04-07 07:05:27",
+    "last_login": null
+  }
+}

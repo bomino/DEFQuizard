@@ -1,0 +1,471 @@
+/* Enhanced CSS for Forklift Operator Quiz App */
+
+/* Main theme colors - expanded palette */
+:root {
+    --primary-color: #1E88E5;
+    --primary-light: #64B5F6;
+    --primary-dark: #0D47A1;
+    --background-color: #f4f7fa;
+    --card-background: #ffffff;
+    --secondary-color: #ff9800;
+    --secondary-light: #FFB74D;
+    --text-color: #212121;
+    --text-light: #757575;
+    --success-color: #4CAF50;
+    --error-color: #F44336;
+    --warning-color: #FFC107;
+    --info-color: #2196F3;
+    --border-radius: 10px;
+    --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    --transition-speed: 0.3s;
+}
+
+/* Page background */
+.main {
+    background-color: var(--background-color);
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Typography */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--primary-dark);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h1:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 4px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+/* Cards styling - enhanced with depth */
+.quiz-card {
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 1.75rem;
+    margin-bottom: 1.5rem;
+    background-color: var(--card-background);
+    border-top: 4px solid var(--primary-color);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.quiz-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Question card specific styling */
+.question-card {
+    border-top: 4px solid var(--info-color);
+}
+
+/* Result card specific styling */
+.result-card {
+    border-top: 4px solid var(--success-color);
+}
+
+/* Buttons - enhanced */
+.stButton button {
+    border-radius: 25px;
+    font-weight: 500;
+    padding: 0.5rem 1.5rem;
+    transition: all var(--transition-speed) ease;
+    border: none !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+}
+
+.stButton button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Primary button */
+.primary-btn button {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+}
+
+.primary-btn button:hover {
+    background-color: var(--primary-dark) !important;
+}
+
+/* Secondary button */
+.secondary-btn button {
+    background-color: var(--secondary-color) !important;
+    color: white !important;
+}
+
+/* Success button */
+.success-btn button {
+    background-color: var(--success-color) !important;
+    color: white !important;
+}
+
+/* Warning button */
+.warning-btn button {
+    background-color: var(--warning-color) !important;
+    color: var(--text-color) !important;
+}
+
+/* Danger button */
+.danger-btn button {
+    background-color: var(--error-color) !important;
+    color: white !important;
+}
+
+/* Ghost button */
+.ghost-btn button {
+    background-color: transparent !important;
+    color: var(--primary-color) !important;
+    border: 1px solid var(--primary-color) !important;
+    box-shadow: none !important;
+}
+
+.ghost-btn button:hover {
+    background-color: rgba(30, 136, 229, 0.1) !important;
+}
+
+/* Alert messages - enhanced */
+.element-container .stAlert {
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.element-container .stAlert:before {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+}
+
+.element-container .stAlert.success {
+    border-left: 5px solid var(--success-color);
+    background-color: rgba(76, 175, 80, 0.1);
+}
+
+.element-container .stAlert.success:before {
+    content: '✓';
+    color: var(--success-color);
+}
+
+.element-container .stAlert.error {
+    border-left: 5px solid var(--error-color);
+    background-color: rgba(244, 67, 54, 0.1);
+}
+
+.element-container .stAlert.error:before {
+    content: '✗';
+    color: var(--error-color);
+}
+
+.element-container .stAlert.warning {
+    border-left: 5px solid var(--warning-color);
+    background-color: rgba(255, 193, 7, 0.1);
+}
+
+.element-container .stAlert.warning:before {
+    content: '⚠';
+    color: var(--warning-color);
+}
+
+.element-container .stAlert.info {
+    border-left: 5px solid var(--info-color);
+    background-color: rgba(33, 150, 243, 0.1);
+}
+
+.element-container .stAlert.info:before {
+    content: 'ℹ';
+    color: var(--info-color);
+}
+
+/* Progress bar - enhanced */
+.stProgress>div>div {
+    background-color: var(--primary-light) !important;
+    border-radius: 10px !important;
+    height: 10px !important;
+}
+
+.stProgress>div>div>div {
+    background-color: var(--primary-color) !important;
+    border-radius: 10px !important;
+}
+
+/* Tables - enhanced */
+.dataframe {
+    border-radius: var(--border-radius) !important;
+    overflow: hidden !important;
+    border: none !important;
+    box-shadow: var(--box-shadow) !important;
+}
+
+.dataframe thead tr th {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+    padding: 12px 15px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    font-size: 0.85rem !important;
+    letter-spacing: 0.5px !important;
+}
+
+.dataframe tbody tr:nth-child(even) {
+    background-color: rgba(244, 247, 250, 0.7) !important;
+}
+
+.dataframe tbody tr td {
+    padding: 12px 15px !important;
+    border-bottom: 1px solid #f0f0f0 !important;
+}
+
+.dataframe tbody tr:hover {
+    background-color: rgba(30, 136, 229, 0.05) !important;
+}
+
+/* Logo container - enhanced */
+.logo-container {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    transition: all var(--transition-speed) ease;
+}
+
+.logo-container img {
+    max-height: 80px;
+    transition: all var(--transition-speed) ease;
+}
+
+.logo-container:hover img {
+    transform: scale(1.05);
+}
+
+/* Certificate styling - enhanced */
+.certificate-container {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: var(--box-shadow);
+    margin: 30px 0;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    position: relative;
+    overflow: hidden;
+}
+
+.certificate-container:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+}
+
+/* Certificate download button - enhanced */
+.certificate-button {
+    display: inline-block;
+    background: linear-gradient(to right, var(--primary-color), var(--primary-dark));
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: all var(--transition-speed) ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 15px rgba(30, 136, 229, 0.4);
+}
+
+.certificate-button:hover {
+    background: linear-gradient(to right, var(--primary-dark), var(--primary-color));
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(30, 136, 229, 0.6);
+}
+
+/* Form inputs - enhanced */
+.stTextInput input,
+.stTextArea textarea,
+.stSelectbox,
+.stNumberInput {
+    border-radius: var(--border-radius) !important;
+    border: 1px solid #e0e0e0 !important;
+    padding: 10px 15px !important;
+    transition: all var(--transition-speed) ease !important;
+}
+
+.stTextInput input:focus,
+.stTextArea textarea:focus {
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 0 0 2px rgba(30, 136, 229, 0.2) !important;
+}
+
+/* Quiz option styling - enhanced */
+.stRadio>div {
+    margin-bottom: 10px !important;
+}
+
+.stRadio>div>div>label {
+    padding: 15px !important;
+    border-radius: var(--border-radius) !important;
+    background-color: #f9f9f9 !important;
+    transition: all var(--transition-speed) ease !important;
+    border: 1px solid #e0e0e0 !important;
+}
+
+.stRadio>div>div>label:hover {
+    background-color: #f0f7ff !important;
+    border-color: var(--primary-light) !important;
+}
+
+.stRadio>div>div>label[data-baseweb="radio"]>div:first-child {
+    background-color: white !important;
+    border-color: var(--primary-color) !important;
+}
+
+.stRadio>div>div>label[aria-checked="true"] {
+    background-color: #e3f2fd !important;
+    border-color: var(--primary-color) !important;
+}
+
+/* Tabs styling - enhanced */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 10px !important;
+}
+
+.stTabs [data-baseweb="tab"] {
+    border-radius: var(--border-radius) var(--border-radius) 0 0 !important;
+    padding: 10px 20px !important;
+    background-color: #f0f0f0 !important;
+}
+
+.stTabs [data-baseweb="tab"][aria-selected="true"] {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+}
+
+.stTabs [data-baseweb="tab-panel"] {
+    padding: 1rem 0 !important;
+}
+
+/* Expander styling - enhanced */
+.streamlit-expanderHeader {
+    font-weight: 600 !important;
+    color: var(--primary-color) !important;
+    background-color: #f9f9f9 !important;
+    border-radius: var(--border-radius) !important;
+    padding: 10px 15px !important;
+    transition: all var(--transition-speed) ease !important;
+}
+
+.streamlit-expanderHeader:hover {
+    background-color: #f0f7ff !important;
+}
+
+.streamlit-expanderContent {
+    border-radius: 0 0 var(--border-radius) var(--border-radius) !important;
+    padding: 20px !important;
+    border: 1px solid #f0f0f0 !important;
+    border-top: none !important;
+}
+
+/* Sidebar - enhanced */
+[data-testid="stSidebar"] {
+    background-color: white;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+}
+
+[data-testid="stSidebar"] .stButton button {
+    width: 100%;
+    text-align: left;
+    padding: 12px 15px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+}
+
+[data-testid="stSidebar"] .stButton button:hover {
+    transform: translateX(5px);
+}
+
+/* Responsive design improvements */
+@media (max-width: 768px) {
+    .main {
+        padding: 1rem;
+    }
+
+    .quiz-card {
+        padding: 1.25rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    .stButton button {
+        padding: 0.4rem 1.2rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* Animation for page transitions */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.main>* {
+    animation: fadeIn 0.5s ease-out;
+}

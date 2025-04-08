@@ -1,0 +1,12 @@
+{
+  "company_name": "Your Company",
+  "passing_score": 80,
+  "certificate_validity_days": 365,
+  "enable_self_registration": true,
+  "default_quiz_time_limit": 0,
+  "default_quiz_questions": 10,
+  "track_categories": true,
+  "require_reset_password": true,
+  "password_expiry_days": 90,
+  "last_updated": "2025-04-06 20:57:27"
+}

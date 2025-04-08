@@ -1,0 +1,77 @@
+[
+  {
+    "username": "XLC-GBO_tester1",
+    "score": 2,
+    "max_score": 3,
+    "percentage": 66.66666666666666,
+    "timestamp": "2025-04-05 20:18:17"
+  },
+  {
+    "username": "XLC-GBO_tester1",
+    "score": 1,
+    "max_score": 3,
+    "percentage": 33.33333333333333,
+    "timestamp": "2025-04-05 20:25:51"
+  },
+  {
+    "username": "XLC-GBO_tester1",
+    "score": 3,
+    "max_score": 3,
+    "percentage": 100.0,
+    "timestamp": "2025-04-05 20:26:12"
+  },
+  {
+    "username": "admin",
+    "score": 3,
+    "max_score": 3,
+    "percentage": 100.0,
+    "timestamp": "2025-04-06 19:59:47"
+  },
+  {
+    "username": "XLC-GBO_tester1",
+    "score": 3,
+    "max_score": 3,
+    "percentage": 100.0,
+    "timestamp": "2025-04-06 20:01:17"
+  },
+  {
+    "id": "10d5a42547",
+    "username": "XLC-GBO_tester1",
+    "score": 2,
+    "max_score": 3,
+    "percentage": 66.66666666666666,
+    "passed": false,
+    "timestamp": "2025-04-07 06:08:45",
+    "time_taken": null,
+    "categories": {
+      "Safety": {
+        "correct": 2,
+        "total": 2
+      },
+      "Operation": {
+        "correct": 0,
+        "total": 1
+      }
+    }
+  },
+  {
+    "id": "8db59fe737",
+    "username": "XLC-GBO_tester1",
+    "score": 3,
+    "max_score": 3,
+    "percentage": 100.0,
+    "passed": true,
+    "timestamp": "2025-04-07 06:10:11",
+    "time_taken": null,
+    "categories": {
+      "Safety": {
+        "correct": 2,
+        "total": 2
+      },
+      "Operation": {
+        "correct": 1,
+        "total": 1
+      }
+    }
+  }
+]

@@ -1,0 +1,5 @@
+streamlit==1.44.1
+pandas==2.2.0
+# SQLite is part of Python's standard library, but let's add these for better management
+sqlalchemy==2.0.23
+alembic==1.12.1  # For database migrations (optional)

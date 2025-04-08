@@ -1,0 +1,22 @@
+[
+  {
+    "id": "c44ac353d2",
+    "username": "admin",
+    "score": 3,
+    "max_score": 3,
+    "percentage": 100.0,
+    "passed": true,
+    "timestamp": "2025-04-07 13:42:53",
+    "time_taken": null,
+    "categories": {
+      "Safety": {
+        "correct": 2,
+        "total": 2
+      },
+      "Operation": {
+        "correct": 1,
+        "total": 1
+      }
+    }
+  }
+]
