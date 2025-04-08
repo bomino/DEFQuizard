@@ -11,7 +11,7 @@ SCORES_FILE = os.path.join(DATA_DIR, "scores.json")
 SETTINGS_FILE = os.path.join(DATA_DIR, "settings.json")
 USER_SETTINGS_DIR = os.path.join(DATA_DIR, "user_settings")
 ASSETS_DIR = "assets"
-LOGO_PATH = os.path.join(ASSETS_DIR, "XLC2.png")
+LOGO_PATH = os.path.join(ASSETS_DIR, "XLC1.png")
 BACKUP_DIR = os.path.join(DATA_DIR, "backups")
 
 # Import database operations - using a try/except to handle circular imports
