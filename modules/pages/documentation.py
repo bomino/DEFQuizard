@@ -2,6 +2,7 @@
 
 import streamlit as st
 from ..ui import load_css, display_logo
+from ..navigation import navigate_to
 
 def documentation_page():
     """Display the application documentation for administrators"""
@@ -208,6 +209,24 @@ def documentation_page():
            - Preview certificate design
            - See how certificates appear to users
         """)
+        
+        st.markdown("### Database Management")
+        st.markdown("""
+        1. **Database Overview**:
+           - View database status and statistics
+           - Monitor database size and performance
+           - View table statistics
+           
+        2. **Database Operations**:
+           - Create database backups
+           - Optimize database performance
+           - Verify database integrity
+           
+        3. **SQLite Migration**:
+           - Migrate from JSON files to SQLite database
+           - Verify migration success
+           - Manage legacy data files
+        """)
     
     with st.expander("Features"):
         st.markdown("### Core Features")
@@ -247,6 +266,7 @@ def documentation_page():
            - Score management and data export
            - System configuration
            - Company branding customization
+           - Database management and optimization
 
         6. **Professional Certificates**
            - Customizable completion certificates
@@ -254,6 +274,13 @@ def documentation_page():
            - Unique certificate IDs
            - Expiration dates
            - Downloadable in HTML format
+           
+        7. **SQLite Database**
+           - Robust relational database storage
+           - Improved data integrity and reliability
+           - Better performance with larger datasets
+           - Advanced query capabilities
+           - Database backup and restore functionality
         """)
     
     with st.expander("Troubleshooting"):
@@ -287,6 +314,12 @@ def documentation_page():
         6. **Missing data files**
            - The application should create necessary files on first run
            - Ensure the app has write permissions to the data directory
+           
+        7. **Database Connection Issues**
+           - Verify SQLite dependencies are installed correctly
+           - Check database file permissions
+           - Ensure no other processes are locking the database
+           - If issues persist, the system will automatically fall back to JSON storage
         """)
     
     with st.expander("Technical Information"):
@@ -299,17 +332,21 @@ def documentation_page():
            
         2. **Backend**
            - Python-based application logic
-           - File-based data storage (JSON)
+           - SQLite database with ORM
+           - JSON fallback for compatibility
            - Module-based organization
            
         3. **Security**
            - Password hashing with SHA-256
            - Role-based access control
            - Session management
+           - Database transaction safety
            
         4. **Data Management**
-           - JSON data storage
+           - Primary SQLite database storage
+           - SQLAlchemy ORM for database operations
            - Automatic backups
+           - JSON compatibility layer
            - Data export capabilities
         """)
         
@@ -317,26 +354,75 @@ def documentation_page():
         st.markdown("""
         1. **Local Deployment**
            - Run on local machine for single-office use
-           - Requires Python environment
+           - Requires Python environment with SQLite support
            
         2. **Server Deployment**
            - Deploy on company intranet
            - Multiple users can access simultaneously
+           - Configure database backup strategy
            
         3. **Cloud Deployment**
            - Deploy on Streamlit Cloud
            - Accessible from anywhere
            - May require additional security measures
+           - Consider database connection limits
         """)
         
         st.markdown("### Data Storage")
         st.markdown("""
-        The application uses JSON files for data storage:
+        The application uses SQLite database for primary data storage:
         
-        - `users.json`: User accounts and authentication data
-        - `questions.json`: Quiz questions and answer options
-        - `scores.json`: Quiz attempt history and performance data
-        - `settings.json`: Application configuration settings
+        - `forklift_training.db`: SQLite database file containing all data
+          - `users` table: User accounts and authentication data
+          - `questions` table: Quiz questions and answer options
+          - `scores` table: Quiz attempt history and performance data
+          - `settings` table: Application configuration settings
         
-        All files are stored in the `data/` directory. Backups are automatically created in `data/backups/` when files are modified.
+        The database file is stored in the `data/` directory. Automatic backups are created in `data/backups/` according to the configured backup schedule.
+        
+        For backward compatibility, the system can also use JSON files:
+        
+        - `users.json`: Legacy user accounts
+        - `questions.json`: Legacy quiz questions
+        - `scores.json`: Legacy quiz scores
+        - `settings.json`: Legacy settings
+        
+        If SQLite dependencies are not available, the system will automatically fall back to using these JSON files.
+        """)
+        
+        st.markdown("### SQLite Migration")
+        st.markdown("""
+        The system includes tools to migrate from JSON file storage to SQLite database:
+        
+        1. **Migration Process**:
+           - Initialize SQLite database schema
+           - Read data from JSON files
+           - Convert and validate data
+           - Insert into appropriate database tables
+           - Verify migration success
+        
+        2. **Migration Options**:
+           - Automatic migration via admin panel
+           - Command-line migration tool (`migrate_to_sqlite.py`)
+           - Options to back up data before migration
+           
+        3. **Verification**:
+           - Count comparison between source and destination
+           - Data integrity checks
+           - Rollback capability if issues detected
+        """)
+    
+    with st.expander("Author & Maintenance Contact Information"):
+        st.markdown("### Primary Developer Contact")
+        st.markdown("""
+        **Name:** MLawali  
+        **Email:** mlawali@vseratexmsp.com  
+        **GitHub:** MLawali  
+        """)
+        
+        st.markdown("### Technical Support")
+        st.markdown("""
+        For technical support or questions regarding the application:
+
+        **Support Email:** mlawali@vseratexmsp.com
         """)
